@@ -1,0 +1,149 @@
+@prefix schema:      <http://schema.org/> .
+@prefix cc:          <http://creativecommons.org/ns#> .
+@prefix sioc:        <http://rdfs.org/sioc/ns#> .
+@prefix xsd:         <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix opllic:      <http://www.openlinksw.com/ontology/licenses#> .
+@prefix oplsof:      <http://www.openlinksw.com/ontology/software#> .
+@prefix oplpro:      <http://www.openlinksw.com/ontology/products#> .
+@prefix xhv:         <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix wdrs:        <http://www.w3.org/2007/05/powder-s#> .
+@prefix foaf:        <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms:     <http://purl.org/dc/terms/> .
+@prefix skos:        <http://www.w3.org/2004/02/skos/core#> .
+@prefix acl:         <http://www.w3.org/ns/auth/acl#> .
+@prefix oplacl:      <http://www.openlinksw.com/ontology/acl#> .
+@prefix oplres:      <http://www.openlinksw.com/ontology/restrictions#> .
+@prefix duration:    <http://data.openlinksw.com/oplweb/duration#> .
+@prefix oplofr:      <http://www.openlinksw.com/ontology/offers#> . 
+@prefix oplcont:     <http://www.openlinksw.com/ontology/contracts#> . 
+@prefix gr:          <http://purl.org/goodrelations/v1#> . 
+@prefix :            <#> .
+@prefix source:      <http://virtuoso.openlinksw.com/data/turtle/support/SupportOffers-Contracts-Prices.ttl> .
+@prefix sourceDAV:   <http://www.openlinksw.com/DAV/virtuoso2.openlinksw.com/data/turtle/Support/SupportOffers-Contracts-Prices.ttl> .
+
+sourceDAV:
+   a schema:CreativeWork ;
+   xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+   cc:attributionName "OpenLink Software" ;
+   cc:attributionURL <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
+   schema:datePublished "2023-01-24T16:26:25-00:00"^^xsd:dateTime ;
+   schema:dateCreated "2023-01-24T16:26:25-00:00"^^xsd:dateTime ;
+   schema:dateModified "2023-01-24T16:26:25-00:00"^^xsd:dateTime ;
+   schema:name "OpenLink Support Plan Offers Related Information Document " ;
+   schema:comment """This document is a launch point for discovering routes to various information sources associated with OpenLink Support Plans. """^^xsd:string ;
+   owl:sameAs source: .
+
+<http://virtuoso.openlinksw.com/offers/> xhv:alternate source: .
+<.> sioc:container_of source: .
+
+source: a schema:CreativeWork ;
+   schema:name "OpenLink Support Plans "^^xsd:string ;
+   schema:comment """This document describes OpenLink Support Plans. """^^xsd:string ;
+   schema:author <http://www.openlinksw.com/#this>  ;
+   xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+   cc:attributionName "OpenLink Software" ;
+   cc:attributionURL <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
+   schema:datePublished "2023-01-24T16:26:25-00:00"^^xsd:dateTime ;
+   schema:dateCreated "2023-01-24T16:26:25-00:00"^^xsd:dateTime ;
+   schema:dateModified "2023-01-24T16:26:25-00:00"^^xsd:dateTime ;
+   schema:about <http://data.openlinksw.com/oplweb/offer/Offer-2023-01-Bronze-Support#this> ,
+                <http://data.openlinksw.com/oplweb/contract/Contract-2023-01-Bronze-Support#this> ,
+                <http://data.openlinksw.com/oplweb/offer-unitprice/UnitPriceSpecification-2023-01-Bronze-Support#this> ,
+                duration:Duration-2023-01-Support-Plan .
+
+# JCH
+#                oplres:uriburner-server ,
+#                oplres:myusnet ,
+#                oplres:Any-LODCloud-Connect-Restriction-basic ,
+#                oplres:rule1 ,
+#                oplres:res1 ,
+#                oplres:res2 ,
+#                oplres:Data-Access-Client-Application-Restriction-Any ,
+#                oplres:Data-Access-Client-Application-Restriction-MSAccess ,
+#                oplres:ConnectivityProtocolRestrictionODBC ,
+#                oplres:SQLConnectivityProtocolRestriction ,
+#                oplres:HTTPConnectivityProtocolRestriction  .
+
+
+## Basic support license just for testing feasibility ##
+
+<http://data.openlinksw.com/oplweb/offer/Offer-2023-01-Bronze-Support#this>
+      a schema:Offer, oplofr:SupportOffer ;
+      oplofr:offerNumber "2023-01-Bronze-Support"^^xsd:string ;
+      schema:name "OpenLink Bronze level support plan "^^xsd:string ;
+      skos:prefLabel "OpenLink Bronze Support Plan "^^xsd:string ;
+      schema:comment """This offer includes a certificate that that entitles a named user an organisation????, identified by a WebID, to something that i don't yet know
+			 """^^xsd:string ;
+      schema:description """Bronze level support plan """^^xsd:string ;
+      wdrs:describedby source: ;
+      opllic:hasBuyService <http://virtuoso.openlinksw.com/offers/order?uri=http%3A%2F%2Fdata.openlinksw.com%2Foplweb%2Foffer%2FOffer-2023-01-Bronze-Support%23this&type=buy&mode=v> ;
+      schema:potentialAction <https://shop.openlinksw.com/cart.vsp?command=add&item=http%3A%2F%2Fdata.openlinksw.com%2Foplweb%2Foffer%2FOffer-2023-01-Bronze-Support%23this> ;
+      schema:mainEntityOfPage <http://virtuoso.openlinksw.com/offers/order?uri=http%3A%2F%2Fdata.openlinksw.com%2Foplweb%2Foffer%2FOffer-2023-01-Bronze-Support%23this&type=buy&mode=v> ;
+      schema:businessFunction gr:Sell ;
+      schema:itemOffered <http://data.openlinksw.com/oplweb/contract/Contract-2023-01-Bronze-Support#this> ;
+      schema:priceSpecification <http://data.openlinksw.com/oplweb/offer-unitprice/UnitPriceSpecification-2023-01-Bronze-Support#this> ;
+      skos:related <> ;
+      schema:validFrom "2023-01-01T00:00:00+00:00"^^xsd:dateTime ;
+      schema:validThrough "2023-03-31T23:59:59Z"^^xsd:dateTime ;
+      oplofr:isMemberOf :OfferGroupSupportContract .
+
+## Contract 
+# Needs some terms defining...
+
+<http://data.openlinksw.com/oplweb/contract/Contract-2023-01-Bronze-Support#this>
+  a oplcont:ExpiringContract, oplcont:Contract, oplcont:SupportContract, oplcont:Bronze, opllic:ExpiringLicense, opllic:CertificateBasedLicense ;
+  oplsof:hasDatabaseFamily oplsof:DBFamilyAny ;
+  oplsof:hasOperatingSystemFamily oplsof:OSFamilyAny ;
+  oplsof:hasOperatingSystemType oplsof:AnyOS ;
+  schema:image <https://www.openlinksw.com/DAV/oplweb3/images/controlled-access-to-data-assets.jpg> ;
+  schema:name """OpenLink Bronze level support plan - 1 year"""^^xsd:string ;
+  skos:prefLabel """OpenLink Bronze level support plan - 1 year"""^^xsd:string;
+  schema:description  """This license entitles a named user etc? identified by a WebID, to our bronze level
+			support plan. """^^xsd:string ;
+  schema:comment """This license entitles a named user etc?, identified by a WebID, to our bronze level
+			support plan. """^^xsd:string ;
+  opllic:productLicenseOf <http://data.openlinksw.com/oplweb/product_release/BronzeSupportPlan2023#this> ;
+  schema:model <http://data.openlinksw.com/oplweb/product/BronzeSupportPlan#this> ;
+  wdrs:describedby source: ;
+  schema:relatedLink <http://data.openlinksw.com/oplweb/contract/Contract-2023-01-Silver-Support#this>, 
+                     <http://data.openlinksw.com/oplweb/contract/Contract-2023-01-Gold-Support#this>  ,
+                     <http://data.openlinksw.com/oplweb/contract/Contract-2023-01-Platinum-Support#this>  ;
+  opllic:hasLicenseFileName "OpenLink-Bronze-Support.p12"^^xsd:string ;
+  opllic:hasDuration duration:Duration-2023-01-Support-Plan .
+
+## Contract Duration
+duration:Duration-2023-01-Support-Plan 
+   a opllic:LicenseDuration ;
+   schema:name """1 Year Duration """^^xsd:string ;
+   wdrs:describedby source: ;
+   opllic:isDurationOf <http://data.openlinksw.com/oplweb/contract/Contract-2023-01-Bronze-Support#this#this>;
+   opllic:durationDays "365"^^xsd:integer .
+
+## Price Specification for Offer
+<http://data.openlinksw.com/oplweb/offer-unitprice/UnitPriceSpecification-2023-01-Bronze-Support#this> 
+   a schema:UnitPriceSpecification, oplofr:SupportPricing, oplofr:SupportRetailUnitPriceSpecification, oplofr:RetailUnitPriceSpecification ;
+   wdrs:describedby source: ;
+   oplofr:priceSpecificationOf <http://data.openlinksw.com/oplweb/offer/Offer-2023-01-Bronze-Support#this> ;
+   schema:priceCurrency "USD"^^xsd:string;
+   schema:price "100.00"^^xsd:decimal ;
+   schema:unitCode "C62"^^xsd:string ;
+   schema:name """OpenLink Bronze Support Plan -- 1 year -- Unit Price: 100.00"""^^xsd:string ;
+   schema:comment """The Bronze Support Plan from OpenLink Software provides some kind of benefits for 1 year."""^^xsd:string ;
+   schema:validFrom "2023-01-01T00:00:00+00:00"^^xsd:dateTime ;
+   schema:validThrough "2023-03-31T23:59:59Z"^^xsd:dateTime .
+
+<http://www.openlinksw.com/dataspace/organization/openlink#this> schema:offers
+      <http://data.openlinksw.com/oplweb/offer/Offer-2023-01-Bronze-Support#this> .
+
+## Silver support plan ##
+## Gold support plan ##
+
+### What about the license restrictions...see the LOD olp ttl document ###
+
+### License Restrictions ###
+
+## ACLs that enforce Restrictions
+

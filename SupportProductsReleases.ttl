@@ -1,0 +1,68 @@
+@prefix schema:    <http://schema.org/> .
+@prefix cc:        <http://creativecommons.org/ns#> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+@prefix sioc:      <http://rdfs.org/sioc/ns#> .
+@prefix xhv:       <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix gr:        <http://purl.org/goodrelations/v1#> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix wdrs:      <http://www.w3.org/2007/05/powder-s#> .
+@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
+@prefix siocs:     <http://rdfs.org/sioc/services#> .
+@prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
+@prefix opllic:    <http://www.openlinksw.com/ontology/licenses#> .
+@prefix oplpro:    <http://www.openlinksw.com/ontology/products#> .
+@prefix :          <#> .
+@prefix source:    <http://virtuoso.openlinksw.com/data/turtle/support/SupportProductsReleases.ttl> .
+@prefix sourceDAV: <http://www.openlinksw.com/DAV/virtuoso2.openlinksw.com/data/turtle/support/SupportProductsReleases.ttl> .
+
+
+sourceDAV:
+   a schema:CreativeWork ;
+   xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+   cc:attributionName "OpenLink Software" ;
+   cc:attributionURL <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
+   schema:datePublished "2023-01-25T14:14:25-00:00"^^xsd:dateTime ;
+   schema:dateCreated "2023-01-25T14:14:25-00:00"^^xsd:dateTime ;
+   schema:dateModified "2023-01-25T14:14:25-00:00"^^xsd:dateTime ;
+   schema:name "OpenLink Support Plan Releases Related Information Document" ;
+   schema:description """This document is a launch point for discovering routes to various information sources associated with OpenLink Support Plan Releases."""^^xsd:string ;
+   schema:about <http://data.openlinksw.com/oplweb/product_release/BronzeSupportPlan2023#this> ;
+   owl:sameAs source: .
+
+<http://virtuoso.openlinksw.com/offers/> xhv:alternate source: .
+<.> sioc:container_of source: .
+
+source: a schema:CreativeWork ;
+   schema:name "OpenLink Support Plan Releases"^^xsd:string ;
+   schema:comment """This is a turtle document that uses Linked Data oriented content to describe OpenLink Support Plan Releases"""^^xsd:string ;
+   schema:author <http://www.openlinksw.com/#this>  ;
+   xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+   cc:attributionName "OpenLink Software" ;
+   cc:attributionURL <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
+   schema:datePublished "2023-01-25T14:14:25-00:00"^^xsd:dateTime ;
+   schema:dateCreated "2023-01-25T14:14:25-00:00"^^xsd:dateTime ;
+   schema:dateModified "2023-01-25T14:14:25-00:00"^^xsd:dateTime ;
+   sioc:has_container <.> ;
+   sioc:sibling <SupportProducts.ttl> ,
+                <SupportOffers-Contracts-Prices.ttl> ;
+   xhv:alternate <http://virtuoso.openlinksw.com/offers/> ;
+   skos:related  <http://uda.openlinksw.com/data/turtle/multi-tier/UDAMTProducts.ttl> ,
+                 <http://uda.openlinksw.com/data/turtle/single-tier/UDASTProducts.ttl> ,
+                 <http://virtuoso.openlinksw.com/data/turtle/virtuoso8/2019/Virtuoso8Products.ttl> ,
+                 <http://virtuoso.openlinksw.com/data/turtle/lod-connectivity/2019/LODProducts.ttl> ;
+   schema:about <http://data.openlinksw.com/oplweb/product_release/BronzeSupportPlan2023#this> .
+
+
+<http://data.openlinksw.com/oplweb/product_release/BronzeSupportPlan2023#this>
+     a oplpro:ProductRelease  ;
+     oplpro:isReleaseOf <http://data.openlinksw.com/oplweb/product/BronzeSupportPlan#this> ;
+     schema:version "1.0"^^xsd:decimal ;
+     oplpro:versionText "1.0"^^xsd:string ;
+     schema:image <https://www.openlinksw.com/DAV/oplweb3/images/controlled-access-to-data-assets.jpg> ;
+     oplpro:hasFamily <http://data.openlinksw.com/oplweb/product_family/professionalservices#this> ;
+     schema:name "Bronze Support Plan Release"^^xsd:string ;
+     opllic:hasProductLicense <http://data.openlinksw.com/oplweb/contract/Contract-2023-01-Bronze-Support#this> ;
+     wdrs:describedby source: .
+
