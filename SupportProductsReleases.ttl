@@ -62,7 +62,7 @@ source: a schema:CreativeWork ;
      oplpro:versionText "1.0"^^xsd:string ;
      schema:image <https://www.openlinksw.com/DAV/oplweb3/images/controlled-access-to-data-assets.jpg> ;
      oplpro:hasFamily <http://data.openlinksw.com/oplweb/product_family/professionalservices#this> ;
-     schema:name "Bronze Support Plan Release"^^xsd:string ;
+     schema:name "Bronze Support Plan Release 1.0"^^xsd:string ;
      opllic:hasProductLicense <http://data.openlinksw.com/oplweb/contract/Contract-2023-01-Bronze-Support#this> ;
      wdrs:describedby source: .
 
